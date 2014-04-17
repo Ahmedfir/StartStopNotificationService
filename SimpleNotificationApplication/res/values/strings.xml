@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SimpleNotificationApplication</string>
+    <string name="SNA_service_luncher_start_button">Start service</string>
+    <string name="SNA_service_luncher_stop_button">Stop service</string>
+    <string name="SNA_notified_activity_more_tests">Click the following the button to navigate to the luncher Activity for more tests.</string>
+    <string name="SNA_notified_activity_button_text">Luncher Activity</string>
+</resources>
