@@ -77,7 +77,10 @@ public class ServiceLuncherActivity extends Activity {
 
 		startStopServiceButton = (Button) findViewById(R.id.SNA_start_stop_service_button);
 
-		startStopServiceButton.setOnClickListener(startServiceListener);
+		// check if the service is running or not when the activity is
+		// created
+		updateButton(AndroidUtil.isServiceRunning(this,
+				NotificationCreatorService.class));
 
 		// create the broadcast receiver to catch the service state changing
 		serviceStateChangeReceiver = new BroadcastReceiver() {
@@ -108,7 +111,7 @@ public class ServiceLuncherActivity extends Activity {
 		// register the receiver
 		registerReceiver(serviceStateChangeReceiver,
 				serviceStateChangeIntentFilter);
-		// check if the service is running or not when the application is
+		// check if the service is running or not when the activity is
 		// resumed
 		updateButton(AndroidUtil.isServiceRunning(this,
 				NotificationCreatorService.class));
